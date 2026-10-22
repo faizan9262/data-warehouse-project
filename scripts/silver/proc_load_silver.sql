@@ -16,7 +16,7 @@ BEGIN
 
     batch_start := clock_timestamp();
     RAISE NOTICE '===========================================================================';
-    RAISE NOTICE 'Loading Silver Latyer';
+    RAISE NOTICE 'Loading Silver Layer';
     RAISE NOTICE '===========================================================================';
 
     RAISE NOTICE '---------------------------------------------------------------------------';
