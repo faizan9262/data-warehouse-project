@@ -11,7 +11,7 @@ DECLARE
 BEGIN
     batch_start := clock_timestamp();
     RAISE NOTICE '===========================================================================';
-    RAISE NOTICE 'Loading Bronze Later';
+    RAISE NOTICE 'Loading Bronze Layer';
     RAISE NOTICE '===========================================================================';
 
     -- Loading CRM 
@@ -127,7 +127,7 @@ BEGIN
 
     batch_end := clock_timestamp();
     batch_duration := EXTRACT(EPOCH FROM (batch_end - batch_start));
-    RAISE NOTICE 'Total loading time for bronze: % seconds', ROUND(batch_duration, 2);
+    RAISE NOTICE 'Total loading time for Bronze Layer: % seconds', ROUND(batch_duration, 2);
 
 EXCEPTION
     WHEN OTHERS THEN

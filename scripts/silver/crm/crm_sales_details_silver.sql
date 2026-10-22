@@ -89,6 +89,9 @@ ORDER BY sls_sales, sls_quantity, sls_price
 
 -- Main Query
 
+RAISE NOTICE 'Truncating Table: silver.crm_sales_details';
+TRUNCATE TABLE silver.crm_sales_details;
+RAISE NOTICE 'Inserting Data Into: silver.crm_sales_details';
 TRUNCATE TABLE silver.crm_sales_details;
 INSERT INTO silver.crm_sales_details(
     sls_ord_num,

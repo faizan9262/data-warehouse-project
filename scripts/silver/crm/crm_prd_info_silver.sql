@@ -61,7 +61,9 @@ WHERE prd_end_dt < prd_start_dt;
 -- Using REPLACE to replace (-)"Dash" with (_)"Underscore".
 -- Same SUSTRING for Remaing part fo prd_key to extract prd key that will help to join table with sales details table. 
 
+RAISE NOTICE 'Truncating Table: silver.crm_prd_info';
 TRUNCATE TABLE silver.crm_prd_info;
+RAISE NOTICE 'Inserting Data Into: silver.crm_prd_info';
 INSERT INTO silver.crm_prd_info(
     prd_id,
     cat_id,

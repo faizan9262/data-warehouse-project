@@ -46,7 +46,9 @@ WHERE cst_lastname != TRIM(cst_lastname);
 -- TRIM firstname and last as they have unwanted spaces -> Query-3
 -- Final Insertion After Transformation
 
+RAISE NOTICE 'Truncating Table: silver.crm_cust_info';
 TRUNCATE TABLE silver.crm_cust_info;
+RAISE NOTICE 'Inserting Data Into: silver.crm_cust_info';
 INSERT INTO silver.crm_cust_info(
     cst_id,
     cst_key,
